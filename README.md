@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佛法寺 白井ニュータウン樹木葬墓地 第2期 - 永代供養・宗教不問</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome (アイコン用) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (和風に合う明朝体・ゴシック体) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Zen+Old+Mincho:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            lightgray: '#F3F4F6', // メイン背景用のライトグレー
+                            bgsoft: '#F9FAFB',    // さらにソフトなグレー
+                            charcoal: '#1A1A1A',  // 荘厳な黒
+                            darkgray: '#2D3748',  // 暗いグレー
+                            accent: '#9B1C1C',    // 印象的なベイビー・茜色（紅花・深紅）
+                            accentlight: '#C81E1E',
+                            gold: '#B45309',      // 荘厳さを引き立てる金・茶系
+                            sage: '#8F9779'       // 静謐な緑
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Shippori Mincho"', '"Zen Old Mincho"', 'serif'],
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* スムーススクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* 和風の美しい縦書きテキスト用（長体化バグを防ぐためtext-combine設定を除外） */
+        .writing-vertical {
+            writing-mode: vertical-rl;
+        }
+        /* フェードインアニメーション用 */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* 高級感のあるぼかし背景 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        /* 伝統的な和柄（市松・霞）をうっすら背景に */
+        .washi-pattern {
+            background-color: #f3f4f6;
+            background-image: radial-gradient(#e5e7eb 1px, transparent 0), radial-gradient(#e5e7eb 1px, transparent 0);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 washi-pattern antialiased">
+
+    <!-- 固定ヘッダー / 電話・案内会予約誘導 -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-card shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex flex-col">
+                <span class="text-xs tracking-widest text-brand-accent font-serif font-bold">天台宗 長命山 佛性院</span>
+                <h1 class="text-lg md:text-xl font-bold font-serif text-brand-charcoal tracking-wide">
+                    佛法寺 <span class="text-sm font-sans font-medium text-gray-600 block md:inline md:ml-2">白井ニュータウン樹木葬墓地 第2期</span>
+                </h1>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-6">
+                <div class="text-right">
+                    <p class="text-xs text-gray-500">現地係員直通（10:00〜16:00 火水定休）</p>
+                    <a href="tel:080-2452-6288" class="text-xl font-bold text-brand-charcoal hover:text-brand-accent transition flex items-center justify-end">
+                        <i class="fa-solid fa-phone mr-1 text-brand-accent"></i> 080-2452-6288
+                    </a>
+                </div>
+                <a href="#contact" class="bg-brand-accent hover:bg-brand-accentlight text-white font-medium py-3 px-6 rounded-full transition duration-300 flex items-center shadow-md transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-calendar-days mr-2"></i>現地案内会予約
+                </a>
+            </div>
+            
+            <!-- スマホ用電話ボタン -->
+            <div class="lg:hidden flex items-center space-x-2">
+                <a href="tel:080-2452-6288" class="bg-brand-charcoal text-white p-3 rounded-full hover:bg-brand-accent transition shadow-md">
+                    <i class="fa-solid fa-phone text-lg"></i>
+                </a>
+                <a href="#contact" class="bg-brand-accent text-white py-2 px-4 rounded-full text-xs font-bold hover:bg-brand-accentlight transition shadow-md">
+                    案内会予約
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインビジュアル -->
+    <section class="relative min-h-screen pt-20 flex items-center justify-center overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(rgba(243, 244, 246, 0.45), rgba(243, 244, 246, 0.85)), url('DSC_254802.jpg');">
+        <!-- 霧・静謐なオーバーレイ -->
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-lightgray via-transparent to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- キャッチコピー（和風茜色の縦書き・長体化バグを完全に修正済み） -->
+            <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-white/95 px-4 py-1.5 rounded-full self-start text-xs font-bold text-brand-accent shadow-sm border border-brand-accent/20">
+                    <span class="inline-block w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                    <span>待望の第2期オープン・現地案内会開催中</span>
+                </div>
+                
+                <!-- 高さを指定して縦書きがブラウザで縮まないように保護 -->
+                <div class="flex items-start gap-6 lg:gap-10 h-[320px] sm:h-[380px] md:h-[420px]">
+                    <!-- 縦書きの美しい日本語キャッチコピー -->
+                    <div class="writing-vertical font-serif text-brand-charcoal tracking-widest leading-relaxed text-2xl sm:text-3xl md:text-4xl lg:text-5xl border-r border-brand-accent/30 pr-4 lg:pr-8 py-2 h-full">
+                        <span class="text-brand-accent font-bold">愛する人</span>と、<br>
+                        自然に還る、<br>
+                        <span class="text-brand-gold">永久の約束。</span>
+                    </div>
+                    <div class="writing-vertical font-serif text-gray-600 tracking-widest leading-relaxed text-base sm:text-lg md:text-xl py-2 h-full hidden sm:block">
+                        宗教不問。継承者不要。<br>
+                        歴史ある天台宗の名刹で、<br>
+                        心安らぐ永遠の眠りを。
+                    </div>
+                </div>
+
+                <!-- 主要特徴ミニタグ -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 max-w-xl">
+                    <div class="bg-white/80 backdrop-blur px-3 py-2 rounded border border-gray-200 text-center text-xs font-bold text-brand-charcoal">
+                        <i class="fa-solid fa-leaf text-brand-sage mr-1"></i> 永代供養
+                    </div>
+                    <div class="bg-white/80 backdrop-blur px-3 py-2 rounded border border-gray-200 text-center text-xs font-bold text-brand-charcoal">
+                        <i class="fa-solid fa-heart text-brand-accent mr-1"></i> 宗教宗派不問
+                    </div>
+                    <div class="bg-white/80 backdrop-blur px-3 py-2 rounded border border-gray-200 text-center text-xs font-bold text-brand-charcoal">
+                        <i class="fa-solid fa-users-slash text-gray-500 mr-1"></i> 継承者不要
+                    </div>
+                    <div class="bg-white/80 backdrop-blur px-3 py-2 rounded border border-gray-200 text-center text-xs font-bold text-brand-charcoal">
+                        <i class="fa-solid fa-house-circle-xmark text-gray-500 mr-1"></i> 墓じまい不要
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右側：訴求カード（価格と来苑促進） -->
+            <div class="lg:col-span-5 bg-white/95 p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col space-y-6 relative">
+                <!-- 装飾用和風リボン -->
+                <div class="absolute -top-3 -right-3 bg-brand-accent text-white text-xs font-bold px-4 py-2 rounded-lg transform rotate-3 shadow-md">
+                    家族・夫婦で眠れる
+                </div>
+                
+                <h3 class="text-xl font-serif font-bold text-brand-charcoal border-b pb-3 flex items-center">
+                    <span class="w-1 h-6 bg-brand-accent mr-2 inline-block"></span>
+                    佛法寺 樹木葬の特徴
+                </h3>
+
+                <!-- チラシ画像（02102.jpg） -->
+                <div class="relative rounded-xl overflow-hidden shadow-sm border border-gray-200 bg-gray-100">
+                    <img src="02102.jpg" alt="白井ニュータウン樹木葬墓地 第2期 OPEN" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-brand-lightgray p-4 rounded-xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-brand-accent font-bold block">3霊まで（家族・夫婦向け）</span>
+                            <span class="font-serif text-lg font-bold text-brand-charcoal">個別プレート家族墓</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs text-gray-500 block">志納金</span>
+                            <span class="text-2xl font-bold text-brand-accent font-serif">43<span class="text-sm">万円〜</span></span>
+                            <span class="text-xs text-gray-400 block">(非課税)</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-lightgray p-4 rounded-xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-brand-accent font-bold block">4霊まで（大家族向け）</span>
+                            <span class="font-serif text-lg font-bold text-brand-charcoal">個別プレート家族墓</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs text-gray-500 block">志納金</span>
+                            <span class="text-2xl font-bold text-brand-accent font-serif">55<span class="text-sm">万円〜</span></span>
+                            <span class="text-xs text-gray-400 block">(非課税)</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-accent/5 p-3 rounded-lg border border-brand-accent/20 flex items-center justify-between">
+                        <span class="text-sm font-bold text-brand-accent"><i class="fa-solid fa-paw mr-1"></i> 大切なペットとともに眠る</span>
+                        <span class="text-xs bg-brand-accent text-white px-2 py-1 rounded font-bold">ペット共葬墓あり</span>
+                    </div>
+                </div>
+
+                <!-- クイック予約ボタン -->
+                <a href="#contact" class="block text-center bg-brand-accent hover:bg-brand-accentlight text-white font-bold py-4 rounded-xl transition duration-300 shadow-md transform hover:scale-[1.02]">
+                    <i class="fa-solid fa-circle-info mr-2"></i>現地案内会を予約する
+                </a>
+                
+                <div class="text-center text-xs text-gray-500 space-y-1">
+                    <p><i class="fa-solid fa-clock mr-1"></i> 受付時間 10:00〜16:00 (火・水曜定休)</p>
+                    <p><i class="fa-solid fa-location-dot mr-1"></i> 北総線「白井駅」から徒歩約10分</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 下スクロール誘導の揺れる矢印 -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-brand-charcoal z-10">
+            <span class="text-xs tracking-widest font-serif block mb-2">下にスクロール</span>
+            <i class="fa-solid fa-chevron-down animate-bounce text-lg"></i>
+        </div>
+    </section>
+
+    <!-- 特徴・メリット訴求セクション -->
+    <section id="features" class="py-20 bg-brand-lightgray border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-section">
+                <span class="text-brand-accent font-serif font-bold tracking-widest text-sm block mb-2">FEATURES</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-charcoal tracking-wide">
+                    佛法寺 樹木葬が選ばれる理由
+                </h2>
+                <div class="w-16 h-1 bg-brand-accent mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600">お墓の後継ぎ、費用、これからの供養の形。現代のご家族が抱えるお悩みに寄り添い、佛法寺が安心の樹木葬をご提案いたします。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 特徴1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300 flex flex-col justify-between fade-in-section">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-6">
+                            <i class="fa-solid fa-hands-praying text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-charcoal mb-4">宗教・宗派は一切不問</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">過去の宗旨宗派は問わず、どなたでもお申込みいただけます。在来仏教、キリスト教、無宗教の方、どのような信条の方でも優しくお迎えいたします。</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-brand-accent font-bold">
+                        ◎ 申込資格：どなたでも可能
+                    </div>
+                </div>
+
+                <!-- 特徴2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300 flex flex-col justify-between fade-in-section">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-6">
+                            <i class="fa-solid fa-users-slash text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-charcoal mb-4">後継ぎ不要・永代供養</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">身寄りがない、あるいは子どもに経済的・心理的な負担をかけたくないという方も安心。寺院が責任を持って永代にわたり責任管理・供養いたします。</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-brand-accent font-bold">
+                        ◎ 管理料等は一括のみで安心
+                    </div>
+                </div>
+
+                <!-- 特徴3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300 flex flex-col justify-between fade-in-section">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-6">
+                            <i class="fa-solid fa-leaf text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-charcoal mb-4">自然豊かな美しい聖地</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">境内には樹齢300年を超える名物「白梅」や、四季折々の美しい草花が息づきます。お参りに訪れるたび、心癒される穏やかで静謐な時間が流れます。</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-brand-accent font-bold">
+                        ◎ 白井市指定文化財を有する名刹
+                    </div>
+                </div>
+
+                <!-- 特徴4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300 flex flex-col justify-between fade-in-section">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-6">
+                            <i class="fa-solid fa-paw text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-charcoal mb-4">ペットと一緒に眠れる</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">家族の一員である大切なペットと一緒に埋葬できる「ペット共葬区画」を設けております。死後も同じ安息の地で過ごしたいという強い想いにお応えします。</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-brand-accent font-bold">
+                        ◎ 非常に希少なペット同伴区画
+                    </div>
+                </div>
+
+                <!-- 特徴5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300 flex flex-col justify-between fade-in-section">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-6">
+                            <i class="fa-solid fa-tag text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-charcoal mb-4">手の届く明瞭な価格</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">志納金43万円（3霊まで・非課税）から。別途護持費一括払い70,000円(非課税)。石碑代は別途となります。年間管理料の追加徴収や寄付金要請などは一切なく、初期費用にすべてを含んだ透明性の高い価格設計を誇ります。</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-brand-accent font-bold">
+                        ◎ 経済的負担を徹底的に軽減
+                    </div>
+                </div>
+
+                <!-- 特徴6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300 flex flex-col justify-between fade-in-section">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-6">
+                            <i class="fa-solid fa-map-location-dot text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-charcoal mb-4">白井駅から徒歩10分の好立地</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">最寄り駅「白井駅」から平坦な道を歩いてすぐ。いつでも思い立った時に気軽にお参りに来られる利便性の良さは、長く通い続けるお墓選びに不可欠なポイントです。</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-brand-accent font-bold">
+                        ◎ 駐車場完備でお車でも安心
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 料金・プラン(価格表) & インタラクティブ価格計算シミュレーター -->
+    <section id="plans" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-section">
+                <span class="text-brand-accent font-serif font-bold tracking-widest text-sm block mb-2">PLANS & PRICES</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-charcoal tracking-wide">
+                    選べるプレート樹木葬プラン
+                </h2>
+                <div class="w-16 h-1 bg-brand-accent mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600">お眠りになる人数やご要望、ペットの有無に合わせて最適なプランをお選びいただけます。すべてのプランで永代供養・40年間個別埋葬(お申込時より)となります。</p>
+            </div>
+
+            <!-- プランカード一覧 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 items-stretch">
+                
+                <!-- プラン1：3霊まで -->
+                <div class="border border-gray-200 rounded-2xl bg-brand-bgsoft overflow-hidden shadow-sm flex flex-col justify-between transition hover:shadow-md fade-in-section">
+                    <div>
+                        <div class="p-6 bg-brand-charcoal text-white text-center">
+                            <span class="text-brand-accent bg-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">家族・夫婦向け</span>
+                            <h3 class="text-xl font-serif font-bold mt-3">3霊個別プレート家族墓</h3>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="text-center py-4 border-b">
+                                <span class="text-xs text-gray-500 block">志納金（非課税）</span>
+                                <span class="text-4xl font-serif font-bold text-brand-accent">43<span class="text-lg">万円〜</span></span>
+                            </div>
+                            <ul class="space-y-3 text-sm text-gray-600">
+                                <li><i class="fa-solid fa-check text-brand-accent mr-2"></i><strong>埋葬人数：</strong>最大3霊様まで個別プレート下へ</li>
+                                <li><i class="fa-solid fa-check text-brand-accent mr-2"></i><strong>永代供養：</strong>佛法寺が責任を持って管理継続</li>
+                                <li><i class="fa-solid fa-check text-brand-accent mr-2"></i><strong>お名前刻印：</strong>石製プレートに美しい彫刻を施します</li>
+                                <li><i class="fa-solid fa-check text-brand-accent mr-2"></i><strong>40年間個別供養：</strong>期限まで移動なく静かにお休みいただけます　期限後は合葬墓へ改葬し永代供養いたします</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" class="block text-center border-2 border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white font-bold py-3 rounded-xl transition duration-300">
+                            このプランを相談する
+                        </a>
+                    </div>
+                </div>
+
+                <!-- プラン2：4霊まで -->
+                <div class="border-2 border-brand-accent rounded-2xl bg-white overflow-hidden shadow-md flex flex-col justify-between transition hover:shadow-lg relative fade-in-section">
+                    <div class="absolute top-4 right-4 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-full">人気</div>
+                    <div>
+                        <div class="p-6 bg-brand-accent text-white text-center">
+                            <span class="bg-white text-brand-accent text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">大家族向け</span>
+                            <h3 class="text-xl font-serif font-bold mt-3">4霊個別プレート家族墓</h3>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="text-center py-4 border-b">
+                                <span class="text-xs text-gray-500 block">志納金（非課税）</span>
+                                <span class="text-4xl font-serif font-bold text-brand-accent">55<span class="text-lg">万円〜</span></span>
+                            </div>
+                            <ul class="space-y-3 text-sm text-gray-600">
+                                <li><i class="fa-solid fa-check text-brand-accent mr-2"></i><strong>埋葬人数：</strong>最大4霊様まで納骨可能</li>
+                                <li><i class="fa-solid fa-check text-brand-accent mr-2"></i><strong>永代供養：</strong>承継者が途絶えても、手厚く管理いたします</li>
+                                <li><i class="fa-solid fa-check text-brand-accent mr-2"></i><strong>お名前刻印：</strong>家名または個々の俗名彫刻に対応</li>
+                                <li><i class="fa-solid fa-check text-brand-accent mr-2"></i><strong>安心保障：</strong>管理料などの不透明な追加支払いは不要</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" class="block text-center bg-brand-accent hover:bg-brand-accentlight text-white font-bold py-3 rounded-xl transition duration-300">
+                            このプランを相談する
+                        </a>
+                    </div>
+                </div>
+
+                <!-- プラン3：ペット共葬墓 -->
+                <div class="border border-gray-200 rounded-2xl bg-brand-bgsoft overflow-hidden shadow-sm flex flex-col justify-between transition hover:shadow-md fade-in-section">
+                    <div>
+                        <div class="p-6 bg-brand-sage text-white text-center">
+                            <span class="bg-white text-brand-sage text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">ペット同伴</span>
+                            <h3 class="text-xl font-serif font-bold mt-3">ペット共葬墓（家族＋ペット）</h3>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="text-center py-4 border-b">
+                                <span class="text-xs text-gray-500 block">志納金（非課税）</span>
+                                <span class="text-2xl font-serif font-bold text-brand-charcoal">※お気軽にお問合せください</span>
+                            </div>
+                            <ul class="space-y-3 text-sm text-gray-600">
+                                <li><i class="fa-solid fa-check text-brand-accent mr-2"></i><strong>大切な家族と共に：</strong>人＋ペットが一体のプレート下へ</li>
+                                <li><i class="fa-solid fa-check text-brand-accent mr-2"></i><strong>40年間個別埋葬：</strong>40年間にわたり個別のプレート区画で安心</li>
+                                <li><i class="fa-solid fa-check text-brand-accent mr-2"></i><strong>プレート彫刻：</strong>愛するペットのお名前や可愛い肉球マークも可能</li>
+                                <li><i class="fa-solid fa-check text-brand-accent mr-2"></i><strong>いつでも会える：</strong>自然に満ちた聖地で再会を祈ります</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" class="block text-center border-2 border-brand-sage text-brand-sage hover:bg-brand-sage hover:text-white font-bold py-3 rounded-xl transition duration-300">
+                            お問合せ・見学予約
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+                               
+    <!-- 写真・区画ギャラリー -->
+    <section id="gallery" class="py-20 bg-brand-lightgray border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-section">
+                <span class="text-brand-accent font-serif font-bold tracking-widest text-sm block mb-2">GALLERY</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-charcoal tracking-wide">
+                    佛法寺の情緒あふれる美景
+                </h2>
+                <div class="w-16 h-1 bg-brand-accent mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600">鎌倉時代より続く歴史が刻まれた本堂、丹精込めて整えられた美しい境内、そして安心してお越しいただける設備をご案内します。</p>
+            </div>
+
+            <!-- ギャラリーグリッド -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <!-- 1. 観音像とお地蔵様 -->
+                <div class="relative overflow-hidden rounded-xl shadow-sm group aspect-square bg-gray-300 fade-in-section">
+                    <img src="DSC_254802.jpg" alt="佛法寺 境内 観音像" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-white text-xs font-bold font-serif">厳かな観音像と七福神（佛法寺）</span>
+                    </div>
+                </div>
+
+                <!-- 2. 本堂正面 -->
+                <div class="relative overflow-hidden rounded-xl shadow-sm group aspect-square bg-gray-300 fade-in-section">
+                    <img src="DSC_254502.jpg" alt="歴史を感じる本堂正面" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-white text-xs font-bold font-serif">安らぎに満ちた本堂</span>
+                    </div>
+                </div>
+
+                <!-- 3. 本堂へと続く美しい参道 -->
+                <div class="relative overflow-hidden rounded-xl shadow-sm group aspect-square bg-gray-300 fade-in-section">
+                    <img src="DSC_253902.jpg" alt="美しく整えられた参道" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-white text-xs font-bold font-serif">緑が優しく包み込む参道</span>
+                    </div>
+                </div>
+
+                <!-- 4. 山門 -->
+                <div class="relative overflow-hidden rounded-xl shadow-sm group aspect-square bg-gray-300 fade-in-section">
+                    <img src="DSC_256202.jpg" alt="格調高い山門" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-white text-xs font-bold font-serif">伝統と風格が漂う山門</span>
+                    </div>
+                </div>
+                
+                <!-- 5. 庭園・参道 -->
+                <div class="relative overflow-hidden rounded-xl shadow-sm group aspect-square bg-gray-300 fade-in-section">
+                    <img src="DSC_256302.jpg" alt="美しい庭園" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-white text-xs font-bold font-serif">心安らぐ美麗な庭園</span>
+                    </div>
+                </div>
+
+                <!-- 6. 駐車場・入り口・看板 -->
+                <div class="relative overflow-hidden rounded-xl shadow-sm group aspect-square bg-gray-300 fade-in-section">
+                    <img src="DSC_255702.jpg" alt="広々とした駐車場" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-white text-xs font-bold font-serif">お車でも安心の広々駐車場</span>
+                    </div>
+                </div>
+
+                <!-- 7. 文化財イメージ（2カラム幅） -->
+                <div class="relative overflow-hidden rounded-xl shadow-sm group aspect-square lg:col-span-2 md:col-span-2 hidden md:block fade-in-section">
+                    <img src="DSC_254102.jpg" alt="重要文化財・佛法寺石碑" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-charcoal/90 to-brand-darkgray/80 flex flex-col justify-center p-8">
+                        <span class="text-brand-accent font-serif text-sm font-bold">白井市指定文化財</span>
+                        <h4 class="text-white text-xl font-serif font-bold mt-2">御本尊阿弥陀如来三尊像</h4>
+                        <p class="text-xs text-gray-300 mt-2 leading-relaxed">佛法寺の本尊は、鎌倉時代中期（13世紀中頃）の名品。平成21年に白井市の有形文化財に正式登録された、確固たる歴史が保障する確かな霊地です。</p>
+                    </div>
+                </div>
+
+                <!-- 8. しろい七福神めぐりイメージ（2カラム幅） -->
+                <div class="relative overflow-hidden rounded-xl shadow-sm group aspect-square lg:col-span-2 md:col-span-2 hidden md:block fade-in-section">
+                    <img src="DSC_254802.jpg" alt="寿老人" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-brand-accent/90 flex flex-col justify-center p-8">
+                        <span class="text-white font-serif text-sm font-bold">地域に親しまれる観光名所</span>
+                        <h4 class="text-white text-xl font-serif font-bold mt-2">しろい七福神めぐり（寿老人）</h4>
+                        <p class="text-xs text-red-100 mt-2 leading-relaxed">長寿を司る神仏として親しまれる「寿老人」が祀られており、年間を通じて多くの笑顔と参拝者が訪れる、常に明るいエネルギーに満ちたお寺です。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 永代供養についての詳細説明 -->
+    <section id="eitai" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-section">
+                <span class="text-brand-accent font-serif font-bold tracking-widest text-sm block mb-2">EITAI KUYOU</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-charcoal tracking-wide">
+                    佛法寺の永代供養がもたらす安心
+                </h2>
+                <div class="w-16 h-1 bg-brand-accent mx-auto mt-4"></div>
+            </div>
+
+            <!-- ステップ・タイムライン調の解説 -->
+            <div class="space-y-12">
+                
+                <div class="flex flex-col md:flex-row gap-6 items-start fade-in-section">
+                    <div class="bg-brand-accent text-white rounded-full w-12 h-12 flex items-center justify-center shrink-0 font-bold text-lg font-serif">
+                        一
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold text-brand-charcoal mb-2">個別期間終了後も、合祀にて永久供養</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">個別期間（ご契約年数）終了後も、寺院墓地内の永代供養塔に合祀し、佛法寺住職が永代にわたって毎日読経・回向を行います。後継者がおられなくなっても、無縁仏になる恐れはございません。</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-6 items-start fade-in-section">
+                    <div class="bg-brand-accent text-white rounded-full w-12 h-12 flex items-center justify-center shrink-0 font-bold text-lg font-serif">
+                        二
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold text-brand-charcoal mb-2">宗派不問ですが、供養は由緒ある「天台宗」の作法で手厚く</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">どのような宗派の方でも広く受け入れておりますが、供養を執り行うのは佛法寺住職（天台宗）となります。天台宗の由緒正しい格式と作法に則り、非常に荘厳で静謐なご供養をお約束いたします。</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-6 items-start fade-in-section">
+                    <div class="bg-brand-accent text-white rounded-full w-12 h-12 flex items-center justify-center shrink-0 font-bold text-lg font-serif">
+                        三
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold text-brand-charcoal mb-2">ご契約後の追加費用請求は一切なし</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">お墓を維持するために徴収される「寺院護持会費」はご契約時にすべて一括でお支払いただく形ですので、未来の子孫、あるいは遺言執行者に経済的な負担を残すことがありません。</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 安心の保証枠 -->
+            <div class="mt-12 bg-brand-lightgray p-6 rounded-2xl border border-gray-200 text-center text-sm text-gray-700 font-serif font-bold fade-in-section">
+                「お墓のご相談だけでなく、終活のアドバイスや、亡き後の手続き不安に対しても、<br class="hidden md:inline">
+                歴代住職の教えを継ぐ第37世住職が親身にお話をお伺いいたします。ご安心ください。」
+            </div>
+        </div>
+    </section>
+
+    <!-- 改葬をご検討の方へ -->
+    <section id="reburial" class="py-20 bg-brand-lightgray border-t border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-section">
+                <span class="text-brand-accent font-serif font-bold tracking-widest text-sm block mb-2">REBURIAL</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-charcoal tracking-wide">
+                    お墓の引っ越し・墓じまいをご検討の方へ
+                </h2>
+                <div class="w-16 h-1 bg-brand-accent mx-auto mt-4"></div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-6 fade-in-section">
+                <h3 class="text-lg font-bold text-brand-charcoal flex items-center">
+                    <i class="fa-solid fa-triangle-exclamation text-brand-gold mr-2 text-xl animate-pulse"></i>
+                    地方のご先祖のお墓を、近くに移したい…
+                </h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    「遠方にあるため高齢でお墓参りに行けない」「田舎のお墓を管理する人がいなくなる」
+                    こういった理由で、近年多くの方が墓じまいや改葬（お墓の引っ越し）を選択しています。
+                </p>
+
+                <!-- 改葬手続きの流れ -->
+                <div class="bg-brand-lightgray p-6 rounded-xl space-y-4">
+                    <h4 class="font-bold text-brand-charcoal text-sm">改葬（お墓の引っ越し）の主なステップ</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs text-center">
+                        <div class="bg-white p-3 rounded shadow-xs">
+                            <span class="font-bold text-brand-accent block mb-1">01. 新しいお墓決定</span>
+                            佛法寺樹木葬の契約および受入証明書発行
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-xs">
+                            <span class="font-bold text-brand-accent block mb-1">02. 地方自治体確認</span>
+                            現在のお墓がある市役所で改葬許可の申請
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-xs">
+                            <span class="font-bold text-brand-accent block mb-1">03. 遺骨お取り出し</span>
+                            現お墓での閉眼法要のうえお骨を取り出す
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-xs">
+                            <span class="font-bold text-brand-accent block mb-1">04. 佛法寺へ埋葬</span>
+                            当寺にて納骨法要を行い無事にお引っ越し完了
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-sm text-brand-accent font-bold">
+                    ※改葬に関係するややこしい書類の書き方や手続きの順序についても、現地の係員・寺院スタッフが分かりやすくサポートさせていただきます。まずは無料見学時にご相談ください。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-section">
+                <span class="text-brand-accent font-serif font-bold tracking-widest text-sm block mb-2">Q & A</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-charcoal tracking-wide">
+                    よくあるご質問
+                </h2>
+                <div class="w-16 h-1 bg-brand-accent mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- 質問1 -->
+                <div class="border border-gray-200 rounded-xl bg-brand-bgsoft overflow-hidden fade-in-section">
+                    <button class="w-full text-left p-5 font-bold font-serif text-brand-charcoal flex justify-between items-center focus:outline-none" onclick="toggleFaq(1)">
+                        <span>Q1. 檀家（門徒）になる必要がありますか？</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 bg-white leading-relaxed">
+                            いいえ、必要ございません。佛法寺の樹木葬はお申込にあたって、寺院の檀家となっていただく必要はありません。また、その後の寄付の強制や行事への強制参加なども一切ございませんので、どなたでも安心してお申込いただけます。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 質問2 -->
+                <div class="border border-gray-200 rounded-xl bg-brand-bgsoft overflow-hidden fade-in-section">
+                    <button class="w-full text-left p-5 font-bold font-serif text-brand-charcoal flex justify-between items-center focus:outline-none" onclick="toggleFaq(2)">
+                        <span>Q2. ペットと一緒に埋葬する場合、費用はどのようになりますか？</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 bg-white leading-relaxed">
+                            ペット共葬区画は通常の個別家族墓とは別の専用の場所を設けております。人数やペットの数（種類）によっていくつかのプランがございます。現地で実際に墓石の位置や価格をご確認いただけますので、案内会へお越しの際にお気軽にスタッフまでお尋ねください。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 質問3 -->
+                <div class="border border-gray-200 rounded-xl bg-brand-bgsoft overflow-hidden fade-in-section">
+                    <button class="w-full text-left p-5 font-bold font-serif text-brand-charcoal flex justify-between items-center focus:outline-none" onclick="toggleFaq(3)">
+                        <span>Q3. 年会費や年間の管理料は本当に必要ないのですか？</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 bg-white leading-relaxed">
+                            はい、必要ありません。最初にいただくお志（志納金）に、永代使用料・個別墓碑設置費・永代供養料・管理費用がすべて含まれています。購入後に別途、毎年維持費用などの請求書がご自宅に届くようなことはございません。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 質問4 -->
+                <div class="border border-gray-200 rounded-xl bg-brand-bgsoft overflow-hidden fade-in-section">
+                    <button class="w-full text-left p-5 font-bold font-serif text-brand-charcoal flex justify-between items-center focus:outline-none" onclick="toggleFaq(4)">
+                        <span>Q4. 現地を見学したい場合はどうすれば良いですか？</span>
+                        <i id="faq-icon-4" class="fa-solid fa-chevron-down text-brand-accent transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 bg-white leading-relaxed">
+                            案内会開催時間（10:00〜16:00 火水定休）の間、現地にて専任の案内係員が常駐しております。突然のご来苑でも可能な限り対応いたしますが、先約がある場合はお待たせしてしまうことがございます。お電話（080-2452-6288）または当ページの「案内会予約フォーム」より、事前のご予約をおすすめいたします。
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 歴史・縁起セクション -->
+    <section id="history" class="py-20 bg-brand-lightgray border-t border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-section">
+                <span class="text-brand-accent font-serif font-bold tracking-widest text-sm block mb-2">HISTORY</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-charcoal tracking-wide">
+                    鎌倉時代に芽吹いた佛法寺の歴史
+                </h2>
+                <div class="w-16 h-1 bg-brand-accent mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- 寺院情報テキスト -->
+                <div class="lg:col-span-7 space-y-6 text-gray-700 text-sm leading-relaxed fade-in-section">
+                    <p>
+                        <strong class="text-brand-charcoal text-base block mb-2">長命山佛性院佛法寺（ちょうめいさん ぶっしょういん ぶっぽうじ）</strong>
+                        佛法寺は、開基が鎌倉時代と伝えられている歴史深い天台宗の由緒正しいお寺です。
+                        ご本尊である木造阿弥陀如来坐像・両脇侍立像は、なんと13世紀中頃（鎌倉時代中期）に作られた極めて貴重な歴史物です。
+                    </p>
+                    <p>
+                        江戸時代には、人々が集まる本堂が「寺子屋」として使用され、教育と教えの普及に大きく貢献したと言われています。今も境内に残されている筆子塔（ふでことう）が、当時の子供たちと地域の人々のつながりを物語ります。
+                    </p>
+                    <p>
+                        現住職は脈々と引き継がれる教えを護る「第37世」。5代前の住職であった栄海大僧正は、當山のほか、あの高名な上野の寛永寺や浅草の浅草寺の住職も務めた、仏教界にその名を刻む高僧でした。
+                    </p>
+                    <p>
+                        平成10年には、現代の聖地としての姿を美しく保つために山門を再建し、境内を大整備。春になると、樹齢300年を超える白梅が息を呑むような見事な華を咲かせます。また、平成21年にはご本尊が白井市の指定重要有形文化財に正式に登録されました。
+                    </p>
+                </div>
+                
+                <!-- 寺院歴史イメージカード -->
+                <div class="lg:col-span-5 bg-white p-6 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-center items-center text-center space-y-4 fade-in-section">
+                    <div class="w-20 h-20 rounded-full bg-brand-accent/5 flex items-center justify-center text-brand-accent text-3xl">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <span class="text-xs text-brand-accent font-bold block">白井市指定文化財を擁する寺</span>
+                    <h4 class="font-serif font-bold text-brand-charcoal text-lg">第37世が受け継ぐ安息の聖地</h4>
+                    <p class="text-xs text-gray-500">お参りに行くだけで心が落ち着く、地元に愛され続ける確かな寺院格があります。</p>
+                    <div class="border-t pt-4 w-full text-left space-y-2 text-xs">
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">本山</span>
+                            <span class="font-bold text-brand-charcoal">比叡山延暦寺</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">文化財</span>
+                            <span class="font-bold text-brand-charcoal">阿弥陀如来三尊像（白井市指定）</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">行事</span>
+                            <span class="font-bold text-brand-charcoal">しろい七福神めぐり（寿老人）</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- アクセス（手書き風の案内図：007.jpgとGoogleマップのハイブリッド3カラムへ刷新） -->
+    <section id="access" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-section">
+                <span class="text-brand-accent font-serif font-bold tracking-widest text-sm block mb-2">ACCESS MAP</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-charcoal tracking-wide">
+                    佛法寺へのアクセス方法
+                </h2>
+                <div class="w-16 h-1 bg-brand-accent mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600">千葉県白井市復987（佛法寺内）。白井ニュータウンエリアから抜群のアクセス。現地駐車場も完備しております。</p>
+            </div>
+
+            <!-- PC時は3つに並んで抜群の見やすさを誇る3カラムグリッドレイアウト -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- 1カラム目：テキストアクセス案内 -->
+                <div class="bg-brand-lightgray p-6 sm:p-8 rounded-2xl border border-gray-200 flex flex-col justify-between fade-in-section">
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-brand-accent text-white p-2.5 rounded-lg mr-4">
+                                <i class="fa-solid fa-train text-lg w-5 h-5 flex items-center justify-center"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-charcoal text-sm">電車でお越しの方</h4>
+                                <p class="text-xs text-gray-600 mt-1">北総鉄道北総線「白井駅」から徒歩で約10分。なだらかな平坦な道のりで、足の不自由な方も安心です。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-brand-accent text-white p-2.5 rounded-lg mr-4">
+                                <i class="fa-solid fa-car text-lg w-5 h-5 flex items-center justify-center"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-charcoal text-sm">お車でお越しの方</h4>
+                                <p class="text-xs text-gray-600 mt-1">国道16号・千葉ニュータウン・白井エリアからアクセス抜群。駐車場をご用意しておりますので直接お入りください。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-brand-accent text-white p-2.5 rounded-lg mr-4">
+                                <i class="fa-solid fa-circle-info text-lg w-5 h-5 flex items-center justify-center"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-charcoal text-sm">所在地詳細</h4>
+                                <p class="text-xs text-gray-600 mt-1">〒270-1422 千葉県白井市復987 (佛法寺 境内地内)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t mt-6">
+                        <p class="text-[11px] text-gray-500 mb-2">※スマートフォンのマップアプリで行き方を検索する場合、下記ボタンよりすぐにGoogleマップナビを起動できます。</p>
+                        <a href="https://maps.app.goo.gl/ij5FLmmGxScs6ap47" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-brand-charcoal hover:bg-brand-accent text-white font-bold py-2.5 px-4 rounded-xl text-xs transition duration-300 w-full shadow-md">
+                            <i class="fa-solid fa-location-arrow mr-2"></i> Googleマップルート案内
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2カラム目：ご送付いただいた詳細マップ案内図（007.jpg） -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200 flex flex-col justify-between fade-in-section">
+                    <div class="p-4 bg-brand-charcoal text-white text-center">
+                        <span class="text-[10px] bg-brand-accent text-white px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">現地周辺マップ</span>
+                        <h4 class="font-serif font-bold text-xs mt-1">白井駅からの徒歩ルート・詳細周辺図</h4>
+                    </div>
+                    <div class="relative flex-grow flex items-center justify-center bg-gray-50 p-2">
+                        <img src="007.jpg" alt="佛法寺 樹木葬墓地 アクセスマップ詳細図" class="w-full h-auto max-h-[300px] object-contain hover:scale-105 transition duration-300 rounded-lg">
+                    </div>
+                    <div class="p-3 bg-brand-lightgray text-center text-[10px] text-gray-500 border-t">
+                        白井市役所・白井総合公園すぐ近くのわかりやすい立地です
+                    </div>
+                </div>
+
+                <!-- 3カラム目：Googleマップ埋め込み（iframe） -->
+                <div class="rounded-2xl overflow-hidden shadow-md border border-gray-200 min-h-[320px] relative fade-in-section md:col-span-2 lg:col-span-1">
+                    <!-- 地図埋め込みiframe -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.5394236316106!2d140.05823827603078!3d35.786688524173215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60227edf914d00c5%3A0x8f65e943cf7a0191!2z5L2b5rOV5a-6!5e0!3m2!1sja!2sjp!4v1783640156843!5m2!1sja!2sjp" class="absolute inset-0 w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 現地案内会へのご案内とご予約・資料請求（コンタクトフォーム） -->
+    <section id="contact" class="py-20 bg-brand-lightgray border-t border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col items-stretch fade-in-section">
+                
+                <!-- 上部ヘッダー -->
+                <div class="bg-brand-accent p-8 text-white text-center">
+                    <span class="text-xs bg-white text-brand-accent px-3 py-1 rounded-full font-bold uppercase tracking-wider">ご見学は事前予約がスムーズ</span>
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold mt-3">現地案内会のご予約・資料請求</h2>
+                    <p class="text-xs text-red-100 mt-2">受付時間：10:00〜16:00 (火曜・水曜日定休)</p>
+                </div>
+
+                <!-- お電話誘導 -->
+                <div class="p-6 bg-brand-charcoal text-white text-center border-b border-gray-800">
+                    <p class="text-xs text-gray-400">お急ぎの方、本日見学を希望される方はお電話が最も確実です</p>
+                    <a href="tel:080-2452-6288" class="inline-flex items-center text-2xl sm:text-3xl font-bold font-serif hover:text-brand-accent transition mt-2 text-brand-lightgray">
+                        <i class="fa-solid fa-phone mr-2 text-brand-accent"></i> 080-2452-6288
+                    </a>
+                    <p class="text-[10px] text-gray-500 mt-1">※スマートフォンならタップしてそのままダイヤル可能です</p>
+                </div>
+                
+    <!-- 運営情報・会社概要・法的要項 -->
+    <footer class="bg-brand-charcoal text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+                
+                <div class="md:col-span-5 space-y-4">
+                    <span class="text-xs text-brand-accent font-serif font-bold tracking-widest block">RELIGIOUS CORPORATION</span>
+                    <h3 class="text-white text-xl font-serif font-bold">宗教法人 佛法寺</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        佛法寺（ぶっぽうじ）は、鎌倉時代から地域の歴史を今に伝える天台宗の由緒ある寺院です。ご本尊阿弥陀如来三尊像は白井市の指定重要文化財に登録されており、「しろい七福神めぐり」の寿老人としても地域の方々に長く愛され続けております。
+                    </p>
+                </div>
+
+                <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
+                    <div class="space-y-2">
+                        <h4 class="text-white font-bold border-b border-gray-800 pb-1">管理運営概要</h4>
+                        <p><strong class="text-gray-300">名　称：</strong> 佛法寺　白井ニュータウン樹木葬墓地　第2期</p>
+                        <p><strong class="text-gray-300">事業主体：</strong> 宗教法人 佛法寺 (天台宗)</p>
+                        <p><strong class="text-gray-300">所在地：</strong> 千葉県白井市復987 (佛法寺 境内地内)</p>
+                        <p><strong class="text-gray-300">最寄駅：</strong> 北総線「白井駅」から徒歩約10分</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h4 class="text-white font-bold border-b border-gray-800 pb-1">案内会受付概要</h4>
+                        <p><strong class="text-gray-300">ご案内受付：</strong> 10：00～16：00</p>
+                        <p><strong class="text-gray-300">定休日：</strong> 火曜日・水曜日</p>
+                        <p><strong class="text-gray-300">現地係員直通電話：</strong> <a href="tel:080-2452-6288" class="text-white hover:underline">080-2452-6288</a></p>
+                        <p><strong class="text-gray-300">申込資格：</strong> 宗教・宗旨不問、在来宗派不問、無宗派も歓迎</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- フッター下部 -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs space-y-4 md:space-y-0">
+                <p>&copy; 2026 宗教法人 佛法寺. All Rights Reserved. </p>
+                <div class="flex space-x-6 text-gray-500">
+                    <a href="#features" class="hover:text-white transition">お墓の特徴</a>
+                    <a href="#plans" class="hover:text-white transition">料金・プラン</a>
+                    <a href="#history" class="hover:text-white transition">縁起・由緒</a>
+                    <a href="#access" class="hover:text-white transition">交通案内</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- スクリプト制御 -->
+    <script>
+        // FAQ アコーディオン制御
+        function toggleFaq(index) {
+            const ans = document.getElementById(`faq-ans-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (ans.style.maxHeight && ans.style.maxHeight !== '0px') {
+                ans.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                ans.style.maxHeight = ans.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // 価格計算シミュレーター
+        let currentCapacity = 3;
+        let isPetRequested = false;
+
+        function selectCapacity(capacity) {
+            currentCapacity = capacity;
+            
+            const cap3Btn = document.getElementById('cap-3-btn');
+            const cap4Btn = document.getElementById('cap-4-btn');
+
+            if (capacity === 3) {
+                cap3Btn.className = 'py-3 px-4 rounded-xl border-2 border-brand-accent bg-white font-bold text-brand-accent text-sm text-center focus:outline-none transition';
+                cap4Btn.className = 'py-3 px-4 rounded-xl border-2 border-gray-200 bg-white font-medium text-gray-600 text-sm text-center hover:border-brand-accent hover:text-brand-accent focus:outline-none transition';
+            } else {
+                cap4Btn.className = 'py-3 px-4 rounded-xl border-2 border-brand-accent bg-white font-bold text-brand-accent text-sm text-center focus:outline-none transition';
+                cap3Btn.className = 'py-3 px-4 rounded-xl border-2 border-gray-200 bg-white font-medium text-gray-600 text-sm text-center hover:border-brand-accent hover:text-brand-accent focus:outline-none transition';
+            }
+            calculatePrice();
+        }
+
+        function selectPet(hasPet) {
+            isPetRequested = hasPet;
+
+            const petNoBtn = document.getElementById('pet-no-btn');
+            const petYesBtn = document.getElementById('pet-yes-btn');
+
+            if (!hasPet) {
+                petNoBtn.className = 'py-3 px-4 rounded-xl border-2 border-brand-accent bg-white font-bold text-brand-accent text-sm text-center focus:outline-none transition';
+                petYesBtn.className = 'py-3 px-4 rounded-xl border-2 border-gray-200 bg-white font-medium text-gray-600 text-sm text-center hover:border-brand-accent hover:text-brand-accent focus:outline-none transition';
+            } else {
+                petYesBtn.className = 'py-3 px-4 rounded-xl border-2 border-brand-accent bg-white font-bold text-brand-accent text-sm text-center focus:outline-none transition';
+                petNoBtn.className = 'py-3 px-4 rounded-xl border-2 border-gray-200 bg-white font-medium text-gray-600 text-sm text-center hover:border-brand-accent hover:text-brand-accent focus:outline-none transition';
+            }
+            calculatePrice();
+        }
+
+        function calculatePrice() {
+            const priceDisplay = document.getElementById('sim-price-display');
+            const noteDisplay = document.getElementById('sim-note');
+            
+            let basePrice = 430000;
+            let note = "永代供養・個別管理を含みます。プレート墓石の種類によって異なる場合がございます。";
+
+            if (currentCapacity === 4) {
+                basePrice = 550000;
+            }
+
+            if (isPetRequested) {
+                priceDisplay.innerHTML = `${basePrice.toLocaleString()} 円〜 <span class="text-xs bg-brand-sage text-white px-2 py-0.5 rounded-full inline-block font-sans ml-2">＋ペット用彫刻/区画差額等</span>`;
+                noteDisplay.textContent = "ペットとの共葬をご希望の場合は、特別な専用区画をご用意いたします。詳しくはお問合せください。";
+            } else {
+                priceDisplay.innerHTML = `${basePrice.toLocaleString()} 円 <span class="text-sm">〜</span>`;
+                noteDisplay.textContent = note;
+            }
+        }
+
+        // フェードインスクロールアニメーション
+        document.addEventListener("DOMContentLoaded", function() {
+            const faders = document.querySelectorAll('.fade-in-section');
+            
+            const appearOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('is-visible');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+
+        // フォーム送信疑似挙動
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const successMsg = document.getElementById('form-success-msg');
+            
+            // フォームを非表示にして送信完了メッセージを表示
+            form.classList.add('hidden');
+            successMsg.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
